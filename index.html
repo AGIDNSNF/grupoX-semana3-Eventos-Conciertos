@@ -20,6 +20,7 @@
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/integrante-1.css">
   <link rel="stylesheet" href="assets/css/integrante-2.css">
+  <script defer src="assets/js/validacion.js"></script>
 </head>
 <body>
   <a class="pulso-skip" href="#inicio">Saltar al contenido</a>
@@ -188,44 +189,47 @@
     <div class="col-lg-10">
       <p class="pulso-eyebrow">RESERVA TU LUGAR</p>
       <h2 id="tituloTickets" class="display-5 fw-bold mb-3">Asegura tu entrada.</h2>
-      <p class="pulso-intro mb-5">Completa el formulario y te contactaremos para confirmar tu reserva. Plazas limitadas.</p>
+      <p class="pulso-intro mb-5">Completa el formulario para probar tu reserva. Es una demostración: no se envían datos ni se compran entradas.</p>
 
-      <form class="row g-3 needs-validation pulso-form" novalidate>
+      <form class="row g-3 needs-validation pulso-form">
         
         <!-- Nombre -->
         <div class="col-md-6">
           <label for="nombre" class="form-label">Nombre completo</label>
           <input type="text" class="form-control" id="nombre" name="nombre" 
-                 placeholder="Ej. Ana Pérez" required aria-describedby="nombreError">
+                 placeholder="Ej. Ana Pérez" required aria-describedby="nombreError nombreValido">
           <div id="nombreError" class="invalid-feedback">
             Por favor, ingresa tu nombre completo.
           </div>
+          <div id="nombreValido" class="valid-feedback">Dato válido.</div>
         </div>
 
         <!-- Email -->
         <div class="col-md-6">
           <label for="email" class="form-label">Correo electrónico</label>
           <input type="email" class="form-control" id="email" name="email" 
-                 placeholder="Ej. ana@correo.com" required aria-describedby="emailError">
+                 placeholder="Ej. ana@correo.com" required aria-describedby="emailError emailValido">
           <div id="emailError" class="invalid-feedback">
             Ingresa un correo electrónico válido.
           </div>
+          <div id="emailValido" class="valid-feedback">Dato válido.</div>
         </div>
 
         <!-- Teléfono -->
         <div class="col-md-6">
           <label for="telefono" class="form-label">Teléfono</label>
           <input type="tel" class="form-control" id="telefono" name="telefono" 
-                 pattern="[0-9]{9}" placeholder="Ej. 987654321" required aria-describedby="telefonoError">
+                 pattern="[0-9]{9}" placeholder="Ej. 987654321" required aria-describedby="telefonoError telefonoValido">
           <div id="telefonoError" class="invalid-feedback">
             Ingresa un teléfono de 9 dígitos.
           </div>
+          <div id="telefonoValido" class="valid-feedback">Dato válido.</div>
         </div>
 
         <!-- Evento -->
         <div class="col-md-6">
           <label for="evento" class="form-label">Selecciona el evento</label>
-          <select class="form-select" id="evento" name="evento" required aria-describedby="eventoError">
+          <select class="form-select" id="evento" name="evento" required aria-describedby="eventoError eventoValido">
             <option value="">Elige un evento...</option>
             <option value="noche-electrica">Noche Eléctrica — 15 Dic</option>
             <option value="festival-verano">Festival de Verano — 20-22 Ene</option>
@@ -234,26 +238,29 @@
           <div id="eventoError" class="invalid-feedback">
             Debes seleccionar un evento.
           </div>
+          <div id="eventoValido" class="valid-feedback">Dato válido.</div>
         </div>
 
         <!-- Cantidad -->
         <div class="col-md-6">
           <label for="cantidad" class="form-label">Cantidad de entradas</label>
           <input type="number" class="form-control" id="cantidad" name="cantidad" 
-                 min="1" max="10" value="1" required aria-describedby="cantidadError">
+                 min="1" max="10" value="1" required aria-describedby="cantidadError cantidadValido">
           <div id="cantidadError" class="invalid-feedback">
             Ingresa una cantidad entre 1 y 10.
           </div>
+          <div id="cantidadValido" class="valid-feedback">Dato válido.</div>
         </div>
 
         <!-- Fecha -->
         <div class="col-md-6">
           <label for="fecha" class="form-label">Fecha preferida</label>
           <input type="date" class="form-control" id="fecha" name="fecha" 
-                 required aria-describedby="fechaError">
+                 required aria-describedby="fechaError fechaValido">
           <div id="fechaError" class="invalid-feedback">
             Selecciona una fecha.
           </div>
+          <div id="fechaValido" class="valid-feedback">Dato válido.</div>
         </div>
 
         <!-- Comentarios -->
@@ -278,11 +285,13 @@
 
         <!-- Botón -->
         <div class="col-12 mt-4">
-          <button class="btn pulso-button btn-lg" type="submit">
+          <button class="btn pulso-button btn-lg" type="submit" disabled>
             Reservar ahora <span aria-hidden="true">↗</span>
           </button>
         </div>
 
+        <div class="col-12"><p id="resultadoReserva" class="mb-0" role="status" aria-live="polite"></p></div>
+        <noscript><p>Activa JavaScript para probar el formulario.</p></noscript>
       </form>
     </div>
   </div>

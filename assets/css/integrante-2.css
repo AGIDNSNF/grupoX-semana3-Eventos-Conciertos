@@ -222,3 +222,8 @@
     padding: 1.25rem;
   }
 }
+/* Mensajes de validación accesibles sobre el fondo oscuro. */
+.pulso-form .valid-feedback { color: var(--pulso-verde); }
+.pulso-form .form-check-input.is-invalid { border-color: #ff8a8a; }
+.pulso-form .form-check-input.is-valid { border-color: var(--pulso-verde); }
+.pulso-form #resultadoReserva:not(:empty) { padding: 1rem; border: 1px solid var(--pulso-verde); border-radius: .6rem; color: var(--pulso-texto); background: var(--pulso-fondo-suave); }
