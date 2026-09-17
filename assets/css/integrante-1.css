@@ -12,3 +12,31 @@ body { margin: 0; background: #111310; color: #f5f5ec; font-family: Arial, Helve
 .pulso-skip { position: absolute; top: -5rem; left: 1rem; z-index: 20; padding: 1rem; background: #d5fa43; color: #111310; }
 .pulso-skip:focus { top: .5rem; }
 a:focus-visible, button:focus-visible { outline: 3px solid #d5fa43 !important; outline-offset: 5px; }
+.pulso-hero { padding-top: clamp(3rem, 7vw, 6rem); background-color: #151912; }
+.pulso-eyebrow { font-size: .7rem; font-weight: 700; letter-spacing: .15em; color: #d5fa43; }
+.pulso-eyebrow > span { margin-right: .5rem; }
+.pulso-hero h1 { font-size: clamp(3.4rem, 7.2vw, 6.6rem); font-weight: 800; line-height: .99; letter-spacing: -.065em; margin: 1.8rem 0; }
+.pulso-title-accent { color: #d5fa43; }
+.pulso-intro { max-width: 31rem; color: #c0c5b8; font-size: 1.05rem; line-height: 1.8; }
+.btn.pulso-button-outline { border: 1px solid #666e5c; border-radius: 999px; color: #f5f5ec; padding: .85rem 1.3rem; font-weight: 700; font-size: .9rem; }
+.btn.pulso-button-outline:hover { background: #303826; border-color: #d5fa43; color: #d5fa43; }
+.pulso-hero-note { margin-top: 2.8rem; font-size: .8rem; }
+.pulso-hero-note p > span { color: #aeb5a3; font-size: .75rem; }
+.pulso-note-icon { border: 1px solid #555e46; border-radius: 50%; width: 2.5rem; height: 2.5rem; display: grid; place-items: center; color: #d5fa43; font-size: 1.2rem; }
+.pulso-poster { position: relative; isolation: isolate; width: 100%; min-height: 470px; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 5px; color: #172014; background: #d5fa43; box-shadow: 14px 14px 0 #d5fa4310; }
+.pulso-poster-top { position: relative; z-index: 2; display: flex; justify-content: space-between; padding: 1.5rem; font-size: .65rem; font-weight: 800; letter-spacing: .1em; }
+.pulso-orbit { position: absolute; border: 1px solid #374b2460; border-radius: 50%; width: 135%; height: 50%; left: -15%; top: 10%; transform: rotate(-35deg); }
+.pulso-orbit-two { transform: rotate(35deg); }
+.pulso-record { width: 72%; aspect-ratio: 1; position: absolute; top: 13%; left: 14%; border-radius: 50%; background: repeating-radial-gradient(circle, #20261c 0 2px, #353c2d 3px, #171c14 4px 7px); box-shadow: 12px 17px 25px #14230d50; display: grid; place-items: center; transform: rotate(-18deg); }
+.pulso-record-label { width: 33%; aspect-ratio: 1; border-radius: 50%; background: #b898e8; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 3.5rem; font-weight: 900; line-height: 1; }
+.pulso-record-label span { font-size: .5rem; letter-spacing: .15em; margin-top: .4rem; }
+.pulso-sticker { position: absolute; top: 39%; right: 5%; background: #b898e8; border: 1px solid #172014; border-radius: 50%; width: 6rem; height: 6rem; display: grid; place-content: center; transform: rotate(12deg); text-align: center; font-size: .8rem; font-weight: 800; }
+.pulso-poster-caption { position: absolute; bottom: 0; left: 0; width: 100%; padding: 1.5rem; background: linear-gradient(transparent, #d5fa43 25%); }
+.pulso-poster-caption > span { font-size: .6rem; font-weight: 800; letter-spacing: .12em; }
+.pulso-poster-caption strong { position: relative; display: block; margin: .65rem 0 1rem; font-size: clamp(2.65rem, 5vw, 4.7rem); letter-spacing: -.07em; line-height: .88; }
+.pulso-poster-caption strong > span { position: absolute; right: 0; bottom: 0; font-size: 2.5rem; }
+.pulso-poster-caption > div { border-top: 1px solid #17201480; padding-top: .8rem; font-size: .55rem; font-weight: 700; letter-spacing: .1em; }
+.pulso-bottom-line { margin-top: 4rem; padding: 1.5rem 0; border-top: 1px solid #ffffff25; color: #bac2ad; font-size: .6rem; letter-spacing: .12em; }
+.pulso-news { padding: 2.3rem 0; background: #202719; border-top: 1px solid #ffffff20; }
+.pulso-news-tag { color: #d5fa43; font-size: .85rem; }
+.pulso-footer { color: #aeb5a3; font-size: .7rem; }
