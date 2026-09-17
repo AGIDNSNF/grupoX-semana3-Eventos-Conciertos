@@ -1,0 +1,229 @@
+/* ============================================================
+   ESTILOS DEL INTEGRANTE 2 — Pulso
+   Secciones: Agenda (grid), Artistas, Formulario (tickets)
+   Compatible con: integrante-1.css (no sobreescribe sus clases)
+   ============================================================ */
+
+/* ---------- Variables de marca (coherentes con Integrante 1) ---------- */
+:root {
+  --pulso-verde: #d5fa43;
+  --pulso-verde-hover: #e3ff82;
+  --pulso-lila: #b898e8;
+  --pulso-fondo: #111310;
+  --pulso-fondo-card: #1a1e16;
+  --pulso-fondo-suave: #202719;
+  --pulso-texto: #f5f5ec;
+  --pulso-texto-suave: #c0c5b8;
+  --pulso-borde: #ffffff20;
+  --pulso-borde-hover: #d5fa4340;
+}
+
+/* ============================================================
+   PASO 4: TARJETAS DE LA AGENDA
+   ============================================================ */
+
+.pulso-card {
+  background: var(--pulso-fondo-card);
+  border: 1px solid var(--pulso-borde);
+  color: var(--pulso-texto);
+  overflow: hidden;
+  border-radius: 1rem; /* refuerzo visual de rounded-xl de Tailwind */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.pulso-card:hover {
+  border-color: var(--pulso-borde-hover);
+  box-shadow: 0 1.5rem 3rem rgba(213, 250, 67, 0.15);
+}
+
+/* Contenedor de la imagen para permitir zoom interno */
+.pulso-card-img-wrapper {
+  overflow: hidden;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.pulso-card img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.pulso-card:hover img {
+  transform: scale(1.08);
+}
+
+.pulso-card .card-body {
+  padding: 1.5rem;
+}
+
+.pulso-card .card-title {
+  color: var(--pulso-texto);
+  letter-spacing: -0.01em;
+}
+
+.pulso-card .card-text {
+  color: var(--pulso-texto-suave);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* ============================================================
+   PASO 4: SECCIÓN DE ARTISTAS
+   ============================================================ */
+
+.pulso-artist {
+  position: relative;
+  padding: 1.75rem 1.5rem;
+  background: var(--pulso-fondo-card);
+  border: 1px solid var(--pulso-borde);
+  border-radius: 1rem;
+  color: var(--pulso-texto);
+  height: 100%;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.pulso-artist:hover {
+  border-color: var(--pulso-borde-hover);
+  transform: translateY(-4px);
+}
+
+.pulso-artist-num {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--pulso-verde);
+  margin-bottom: 0.75rem;
+}
+
+.pulso-artist p {
+  color: var(--pulso-texto-suave);
+  font-size: 0.9rem;
+}
+
+/* ============================================================
+   PASO 5: FORMULARIO ACCESIBLE
+   ============================================================ */
+
+.pulso-form .form-label {
+  color: var(--pulso-verde);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.pulso-form .form-control,
+.pulso-form .form-select {
+  background: var(--pulso-fondo-card);
+  border: 1px solid var(--pulso-borde);
+  color: var(--pulso-texto);
+  padding: 0.8rem 1rem;
+  border-radius: 0.6rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pulso-form .form-control::placeholder,
+.pulso-form .form-select::placeholder {
+  color: #6b7263;
+}
+
+.pulso-form .form-control:focus,
+.pulso-form .form-select:focus {
+  background: var(--pulso-fondo-card);
+  border-color: var(--pulso-verde);
+  color: var(--pulso-texto);
+  box-shadow: 0 0 0 0.25rem rgba(213, 250, 67, 0.25);
+}
+
+/* Estado inválido (is-invalid) — refuerzo visual del verde de marca */
+.pulso-form .form-control.is-invalid,
+.pulso-form .form-select.is-invalid {
+  border-color: #ff5c5c;
+  background-image: none;
+}
+
+.pulso-form .form-control.is-invalid:focus,
+.pulso-form .form-select.is-invalid:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 92, 92, 0.25);
+}
+
+/* Estado válido */
+.pulso-form .form-control.is-valid,
+.pulso-form .form-select.is-valid {
+  border-color: var(--pulso-verde);
+  background-image: none;
+}
+
+.pulso-form .form-control.is-valid:focus,
+.pulso-form .form-select.is-valid:focus {
+  box-shadow: 0 0 0 0.25rem rgba(213, 250, 67, 0.25);
+}
+
+/* Mensajes de error */
+.pulso-form .invalid-feedback {
+  color: #ff8a8a;
+  font-size: 0.82rem;
+  margin-top: 0.35rem;
+}
+
+/* Checkbox */
+.pulso-form .form-check-input {
+  background-color: var(--pulso-fondo-card);
+  border-color: var(--pulso-borde);
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.2rem;
+}
+
+.pulso-form .form-check-input:checked {
+  background-color: var(--pulso-verde);
+  border-color: var(--pulso-verde);
+}
+
+.pulso-form .form-check-input:focus {
+  box-shadow: 0 0 0 0.25rem rgba(213, 250, 67, 0.25);
+  border-color: var(--pulso-verde);
+}
+
+.pulso-form .form-check-label {
+  color: var(--pulso-texto-suave);
+  font-size: 0.9rem;
+  padding-left: 0.35rem;
+}
+
+/* Textarea */
+.pulso-form textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Botón de submit en el formulario */
+.pulso-form .pulso-button {
+  padding: 0.9rem 1.6rem;
+  font-size: 1rem;
+}
+
+/* ============================================================
+   AJUSTES RESPONSIVOS (sin @media manuales agresivos)
+   ============================================================ */
+
+/* Mejora el espaciado de las tarjetas en pantallas pequeñas */
+@media (max-width: 767.98px) {
+  .pulso-card img {
+    height: 200px;
+  }
+  
+  .pulso-card .card-body {
+    padding: 1.25rem;
+  }
+}
+/* Mensajes de validación accesibles sobre el fondo oscuro. */
+.pulso-form .valid-feedback { color: var(--pulso-verde); }
+.pulso-form .form-check-input.is-invalid { border-color: #ff8a8a; }
+.pulso-form .form-check-input.is-valid { border-color: var(--pulso-verde); }
+.pulso-form #resultadoReserva:not(:empty) { padding: 1rem; border: 1px solid var(--pulso-verde); border-radius: .6rem; color: var(--pulso-texto); background: var(--pulso-fondo-suave); }
