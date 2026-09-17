@@ -73,18 +73,220 @@
         <div class="pulso-bottom-line d-flex flex-wrap justify-content-between gap-3"><span>LA MEJOR CONEXIÓN ES EN DIRECTO.</span><span>ROCK &nbsp; / &nbsp; INDIE &nbsp; / &nbsp; ELECTRÓNICA &nbsp; / &nbsp; MÁS</span></div>
       </div>
     </section>
-    <!-- INICIO INTEGRANTE 2: reemplazar estos bloques por la agenda y el formulario; conservar los identificadores. -->
-    <section id="agenda" class="container py-5" aria-labelledby="tituloAgenda">
-      <p class="pulso-eyebrow">TU PRÓXIMO PLAN</p>
-      <h2 id="tituloAgenda">La agenda está por sonar.</h2>
-      <p>Próximamente encontrarás aquí los conciertos y sus fechas.</p>
-      <div id="artistas"><h3>Artistas en escena</h3><p>Estamos preparando el próximo encuentro con tu música favorita.</p></div>
-    </section>
-    <section id="tickets" class="container pb-5" aria-labelledby="tituloTickets">
-      <h2 id="tituloTickets">Tickets, muy pronto.</h2>
-      <p>La información de entradas estará disponible junto con la agenda. Todavía no hay reservas ni ventas habilitadas.</p>
-    </section>
-    <!-- FIN INTEGRANTE 2 -->
+<!-- INICIO INTEGRANTE 2 -->
+<!-- ============================================================
+     PASO 4: GRID DE TARJETAS (Sistema de 12 columnas + Estados)
+     Bootstrap: container, row, col-md-4, card
+     Tailwind: rounded-xl, shadow-lg, hover:scale-105, transition-transform
+     ============================================================ -->
+<section id="agenda" class="container py-5" aria-labelledby="tituloAgenda">
+  <p class="pulso-eyebrow">TU PRÓXIMO PLAN</p>
+  <h2 id="tituloAgenda" class="display-5 fw-bold mb-3">La agenda está por sonar.</h2>
+  <p class="pulso-intro mb-5">Estos son los conciertos que están por encender los escenarios. Elige el tuyo y asegura tu lugar.</p>
+
+  <div class="row g-4">
+    
+    <!-- Tarjeta 1: Noche Eléctrica -->
+    <div class="col-md-4">
+      <article class="card h-100 rounded-xl shadow-lg transition-transform hover:scale-105 pulso-card">
+        <div class="pulso-card-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop" 
+               class="card-img-top rounded-t-xl" 
+               alt="Banda de rock tocando en vivo sobre un escenario con luces">
+        </div>
+        <div class="card-body d-flex flex-column">
+          <p class="pulso-eyebrow mb-2">ROCK · 15 DIC</p>
+          <h3 class="card-title fw-bold h5 mb-2">Noche Eléctrica</h3>
+          <p class="card-text flex-grow-1">Las mejores bandas del rock peruano se reúnen en una sola noche para hacer temblar el escenario.</p>
+          <a href="#tickets" class="btn pulso-button mt-3 align-self-start">
+            Reservar entrada <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <!-- Tarjeta 2: Festival de Verano -->
+    <div class="col-md-4">
+      <article class="card h-100 rounded-xl shadow-lg transition-transform hover:scale-105 pulso-card">
+        <div class="pulso-card-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop" 
+               class="card-img-top rounded-t-xl" 
+               alt="Multitud disfrutando de un festival de música al aire libre">
+        </div>
+        <div class="card-body d-flex flex-column">
+          <p class="pulso-eyebrow mb-2">FESTIVAL · 20-22 ENE</p>
+          <h3 class="card-title fw-bold h5 mb-2">Festival de Verano</h3>
+          <p class="card-text flex-grow-1">Tres días de música, arte y gastronomía bajo el sol. El plan perfecto para empezar el año.</p>
+          <a href="#tickets" class="btn pulso-button mt-3 align-self-start">
+            Reservar entrada <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <!-- Tarjeta 3: Noche Acústica -->
+    <div class="col-md-4">
+      <article class="card h-100 rounded-xl shadow-lg transition-transform hover:scale-105 pulso-card">
+        <div class="pulso-card-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&h=400&fit=crop" 
+               class="card-img-top rounded-t-xl" 
+               alt="Guitarrista tocando en un concierto acústico íntimo">
+        </div>
+        <div class="card-body d-flex flex-column">
+          <p class="pulso-eyebrow mb-2">ACÚSTICO · 5 FEB</p>
+          <h3 class="card-title fw-bold h5 mb-2">Noche Acústica</h3>
+          <p class="card-text flex-grow-1">Una experiencia íntima con artistas locales en formato acústico. Voces, cuerdas y silencio.</p>
+          <a href="#tickets" class="btn pulso-button mt-3 align-self-start">
+            Reservar entrada <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<!-- Sección de Artistas -->
+<section id="artistas" class="container py-5" aria-labelledby="tituloArtistas">
+  <p class="pulso-eyebrow">EN ESCENA</p>
+  <h2 id="tituloArtistas" class="display-5 fw-bold mb-3">Artistas que harán vibrar el escenario.</h2>
+  <p class="pulso-intro mb-5">Voces nuevas, bandas consagradas y sonidos que se sienten en la piel.</p>
+
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="pulso-artist">
+        <span class="pulso-artist-num" aria-hidden="true">01</span>
+        <h3 class="h5 fw-bold mb-1">Los Andes Eléctricos</h3>
+        <p class="mb-0">Rock alternativo con raíces andinas.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="pulso-artist">
+        <span class="pulso-artist-num" aria-hidden="true">02</span>
+        <h3 class="h5 fw-bold mb-1">Marina Salas</h3>
+        <p class="mb-0">Voz indie y letras que cuentan historias.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="pulso-artist">
+        <span class="pulso-artist-num" aria-hidden="true">03</span>
+        <h3 class="h5 fw-bold mb-1">DJ Cumbre</h3>
+        <p class="mb-0">Electrónica que conecta cuerpo y pista.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PASO 5: FORMULARIO CON VALIDACIÓN UI Y ACCESIBILIDAD
+     Bootstrap: form-control, is-invalid, valid-feedback
+     Accesibilidad: label for/id, aria-describedby, contraste ≥4.5:1
+     ============================================================ -->
+<section id="tickets" class="container py-5" aria-labelledby="tituloTickets">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <p class="pulso-eyebrow">RESERVA TU LUGAR</p>
+      <h2 id="tituloTickets" class="display-5 fw-bold mb-3">Asegura tu entrada.</h2>
+      <p class="pulso-intro mb-5">Completa el formulario y te contactaremos para confirmar tu reserva. Plazas limitadas.</p>
+
+      <form class="row g-3 needs-validation pulso-form" novalidate>
+        
+        <!-- Nombre -->
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre completo</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" 
+                 placeholder="Ej. Ana Pérez" required aria-describedby="nombreError">
+          <div id="nombreError" class="invalid-feedback">
+            Por favor, ingresa tu nombre completo.
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-6">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="email" name="email" 
+                 placeholder="Ej. ana@correo.com" required aria-describedby="emailError">
+          <div id="emailError" class="invalid-feedback">
+            Ingresa un correo electrónico válido.
+          </div>
+        </div>
+
+        <!-- Teléfono -->
+        <div class="col-md-6">
+          <label for="telefono" class="form-label">Teléfono</label>
+          <input type="tel" class="form-control" id="telefono" name="telefono" 
+                 pattern="[0-9]{9}" placeholder="Ej. 987654321" required aria-describedby="telefonoError">
+          <div id="telefonoError" class="invalid-feedback">
+            Ingresa un teléfono de 9 dígitos.
+          </div>
+        </div>
+
+        <!-- Evento -->
+        <div class="col-md-6">
+          <label for="evento" class="form-label">Selecciona el evento</label>
+          <select class="form-select" id="evento" name="evento" required aria-describedby="eventoError">
+            <option value="">Elige un evento...</option>
+            <option value="noche-electrica">Noche Eléctrica — 15 Dic</option>
+            <option value="festival-verano">Festival de Verano — 20-22 Ene</option>
+            <option value="noche-acustica">Noche Acústica — 5 Feb</option>
+          </select>
+          <div id="eventoError" class="invalid-feedback">
+            Debes seleccionar un evento.
+          </div>
+        </div>
+
+        <!-- Cantidad -->
+        <div class="col-md-6">
+          <label for="cantidad" class="form-label">Cantidad de entradas</label>
+          <input type="number" class="form-control" id="cantidad" name="cantidad" 
+                 min="1" max="10" value="1" required aria-describedby="cantidadError">
+          <div id="cantidadError" class="invalid-feedback">
+            Ingresa una cantidad entre 1 y 10.
+          </div>
+        </div>
+
+        <!-- Fecha -->
+        <div class="col-md-6">
+          <label for="fecha" class="form-label">Fecha preferida</label>
+          <input type="date" class="form-control" id="fecha" name="fecha" 
+                 required aria-describedby="fechaError">
+          <div id="fechaError" class="invalid-feedback">
+            Selecciona una fecha.
+          </div>
+        </div>
+
+        <!-- Comentarios -->
+        <div class="col-12">
+          <label for="comentarios" class="form-label">Comentarios (opcional)</label>
+          <textarea class="form-control" id="comentarios" name="comentarios" 
+                    rows="3" placeholder="¿Alguna preferencia o consulta?"></textarea>
+        </div>
+
+        <!-- Términos -->
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="terminos" required aria-describedby="terminosError">
+            <label class="form-check-label" for="terminos">
+              Acepto los términos y condiciones y la política de privacidad.
+            </label>
+            <div id="terminosError" class="invalid-feedback">
+              Debes aceptar los términos para continuar.
+            </div>
+          </div>
+        </div>
+
+        <!-- Botón -->
+        <div class="col-12 mt-4">
+          <button class="btn pulso-button btn-lg" type="submit">
+            Reservar ahora <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>
+<!-- FIN INTEGRANTE 2 -->
     <aside id="novedades" class="pulso-news" aria-labelledby="tituloNovedades"><div class="container d-flex flex-wrap align-items-center justify-content-between gap-3"><div><p class="pulso-eyebrow mb-2">PRIMERA NOTA</p><h2 id="tituloNovedades" class="h4 mb-0">Un nuevo punto de encuentro para la música en vivo.</h2></div><span class="pulso-news-tag">Esto recién empieza ↗</span></div></aside>
   </main>
   <footer class="container py-4 d-flex flex-wrap justify-content-between gap-2 pulso-footer"><span>PULSO © 2026</span><span>Hecho para sentir la música. · Proyecto académico</span></footer>
