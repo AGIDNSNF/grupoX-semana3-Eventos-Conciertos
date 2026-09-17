@@ -1,0 +1,14 @@
+/* Estilos del integrante 1: navegación y portada. */
+body { margin: 0; background: #111310; color: #f5f5ec; font-family: Arial, Helvetica, sans-serif; }
+.pulso-header { position: relative; z-index: 10; background: #111310ee; border-bottom: 1px solid #ffffff20; }
+.pulso-brand { font-size: 2rem; font-weight: 900; letter-spacing: -.1rem; }
+.pulso-symbol { display: inline-grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: 50%; background: #d5fa43; color: #111310; font-size: 1.7rem; }
+.pulso-dot { color: #d5fa43; }
+.pulso-header .nav-link { color: #cccfc4; font-size: .9rem; }
+.pulso-header .nav-link:hover, .pulso-header .nav-link:focus, .pulso-header .nav-link.active { color: #d5fa43; }
+.pulso-header .pulso-badge { background: #d5fa43; color: #111310; }
+.btn.pulso-button { background: #d5fa43; color: #111310; border: 1px solid #d5fa43; border-radius: 999px; padding: .85rem 1.3rem; font-weight: 700; font-size: .9rem; }
+.btn.pulso-button:hover { background: #e3ff82; color: #111310; border-color: #e3ff82; }
+.pulso-skip { position: absolute; top: -5rem; left: 1rem; z-index: 20; padding: 1rem; background: #d5fa43; color: #111310; }
+.pulso-skip:focus { top: .5rem; }
+a:focus-visible, button:focus-visible { outline: 3px solid #d5fa43 !important; outline-offset: 5px; }
